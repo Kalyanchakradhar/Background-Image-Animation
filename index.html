@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image animation slider hover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="./images/in.jpg" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/virtusa-footer-logo.jpg" >
+                </div>
+                <div class="menu-icons">
+                    <img src="./images/userrrrrrrr.jpg">
+                    <img src="./images/cartt.jpg">
+                    <img src="./images/menuu.jpg">
+                </div>
+            </div>
+            <div class="content">
+                <h1>LET'S START YOUR CARRER WITH <span>VIRTUSA</span></h1>
+                    <h3>Go to virtusa website and send details to get connect and add your skills 
+                        for better opportunity make best use of it</h3>
+                        <div>
+                            <button type="button">VISIT</button>
+                            <button type="button" class="btn-2">COMPANY DETAILS</button>
+                        </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+<script>
+    var slideImg = document.getElementById("slideImg");
+
+var images = new Array(
+    "images/666.jpg",
+    "images/777.jpg",
+    "images/888.jpg",
+    "images/999.jpg",
+    "images/1010.jpg",
+    
+);
+
+var len = images.length;
+var i = 0;
+
+function slider() {
+    if(i > len-1){
+        i = 0;
+    }
+    slideImg.src = images[i];
+    i++;
+    setTimeout('slider()',3000);
+    
+}
+</script>
+</body>
+</html>
